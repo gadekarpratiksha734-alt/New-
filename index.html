@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4CAF50">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PillCare App</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="app-container">
+  <h1>PillCare 💊</h1>
+  <div class="card">
+    <h2>Set Pill Reminder</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/2966/2966485.png" width="60">
+    <label>Medicine Name:</label>
+    <input type="text" id="medicineName" placeholder="Enter medicine name">
+    <br><br>
+    <label>Time:</label>
+    <input type="time" id="reminderTime">
+    <label>Day:</label>
+    <select id="daySelect">
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+      <option>Saturday</option>
+      <option>Sunday</option>
+    </select>
+    <button class="btn-green" onclick="addReminder()">➕ Add Reminder</button>
+    <ul id="reminderList"></ul>
+  </div>
+  <div class="card">
+    <h2>Health Monitoring</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="60">
+    <button class="btn-blue" onclick="measureHealth()">📟 Thumb Scan</button>
+    <p id="healthResult">Press button to measure...</p>
+  </div>
+  <div class="card">
+    <h2>Missing Pills</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/4320/4320355.png" width="60">
+    <button class="btn-orange" onclick="addMissedPill()">➕ Mark as Missed</button>
+    <ul id="missedList"></ul>
+  </div>
+  <div class="card">
+    <h2>Test Alarm</h2>
+    <button class="btn-blue" onclick="playBeep()">🔊 Beep</button>
+    <button class="btn-blue" onclick="playChime()">🔔 Chime</button>
+    <audio id="beepSound" src="alarm_beep.wav"></audio>
+    <audio id="chimeSound" src="alarm_chime.wav"></audio>
+  </div>
+  <div class="card">
+    <h2>Share With Doctor / Family</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/906/906361.png" width="60">
+    <button class="btn-blue" onclick="shareWhatsApp()">📱 WhatsApp</button>
+    <button class="btn-blue" onclick="shareEmail()">📧 Email</button>
+  </div>
+  <div class="card">
+    <h2>Motivation 💡</h2>
+    <p id="motivationText">Click the button for motivation!</p>
+    <button class="btn-orange" onclick="showMotivation()">✨ Inspire Me</button>
+  </div>
+</div>
+<footer style="text-align:center; margin-top:20px;">
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
